@@ -24,12 +24,4 @@ Senha válida!
 ^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-+]).{8,}$
 ```
 
-**Explicação:**
 
-Parte	Significado
-^ e $	Início e fim da string
-(?=.*[a-z])	Pelo menos uma letra minúscula
-(?=.*[A-Z])	Pelo menos uma letra maiúscula
-(?=.*\d)	Pelo menos um número
-(?=.*[!@#$%^&*()\-+])	Pelo menos um caractere especial
-.{8,}	No mínimo 8 caracteres no total
