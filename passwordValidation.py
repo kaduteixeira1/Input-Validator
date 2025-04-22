@@ -1,15 +1,14 @@
 import re
 
-def validar_senha(senha):
-    padrao = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-+]).{8,}$'
-    if re.match(padrao, senha):
-        return "Senha válida!"
+def validate_password(password):
+    pattern = r'^(?=.*[!@#$%^&*()\-+])(?=.*[A-Z])(?=.*\d)(?=.*[a-z]).{8,}$'
+    if re.match(pattern, password):
+        return "Valid password!"
     else:
-        return "Senha inválida. Requisitos: 8+ caracteres, 1 minúscula, 1 maiúscula, 1 número, 1 especial."
+        return "Invalid password. Requirements: 8+ characters, 1 lowercase, 1 uppercase, 1 number, 1 special character."
 
-# Execução exemplo
 while True:
-    senha = input("Digite a senha para validar (ou 'sair' para encerrar): ")
-    if senha.lower() == "sair":
+    password = input("Enter the password to validate (or type 'exit' to quit): ")
+    if password.lower() == "exit":
         break
-    print(validar_senha(senha))
+    print(validate_password(password))
